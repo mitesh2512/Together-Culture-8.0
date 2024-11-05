@@ -82,6 +82,7 @@
             Controls.Add(tableLayoutPanel1);
             DoubleBuffered = true;
             ForeColor = Color.Transparent;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "StartPage";
             Text = "Toghether-Culture";
