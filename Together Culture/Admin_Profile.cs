@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Together_Culture
 {
-    public partial class Form1 : Form
+    public partial class Admin_Profile : Form
     {
-        public Form1()
+        public Admin_Profile()
         {
             InitializeComponent();
         }

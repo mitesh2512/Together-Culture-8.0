@@ -1,6 +1,6 @@
 ﻿namespace Together_Culture
 {
-    partial class Form1
+    partial class Admin_Profile
     {
         /// <summary>
         /// Required designer variable.
