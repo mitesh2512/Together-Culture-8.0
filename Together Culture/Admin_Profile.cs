@@ -16,5 +16,20 @@ namespace Together_Culture
         {
             InitializeComponent();
         }
+
+        private void Admin_Profile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
