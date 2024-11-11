@@ -1,6 +1,6 @@
 ﻿namespace Together_Culture
 {
-    partial class Form2
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            textBox1 = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            UserName = new TextBox();
+            textBox2 = new TextBox();
+            pictureBox3 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // UserName
             // 
-            textBox1.Location = new Point(310, 170);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            UserName.Location = new Point(1140, 390);
+            UserName.Name = "UserName";
+            UserName.Size = new Size(231, 27);
+            UserName.TabIndex = 1;
+            UserName.TextChanged += textBox1_TextChanged_1;
             // 
-            // Form2
+            // textBox2
+            // 
+            textBox2.Location = new Point(1140, 454);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(231, 27);
+            textBox2.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(-14, -32);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(1080, 1080);
+            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(1140, 367);
+            label1.Name = "label1";
+            label1.Size = new Size(75, 20);
+            label1.TabIndex = 5;
+            label1.Text = "Username";
+            label1.Click += label1_Click_2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(1140, 431);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 20);
+            label2.TabIndex = 6;
+            label2.Text = "Password";
+            // 
+            // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1430, 996);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(textBox2);
+            Controls.Add(UserName);
+            Controls.Add(pictureBox3);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form2";
-            Text = "Form2";
+            ImeMode = ImeMode.On;
+            Name = "Login";
+            Text = "Login Page";
+            WindowState = FormWindowState.Maximized;
+            Load += Form2_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox textBox1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TextBox UserName;
+        private TextBox textBox2;
+        private PictureBox pictureBox3;
+        private Label label1;
+        private Label label2;
     }
 }

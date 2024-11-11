@@ -13,7 +13,7 @@ namespace Together_Culture
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 startform = new Form2();
+            Login startform = new Login();
             startform.Show();
             this.Hide();
         }

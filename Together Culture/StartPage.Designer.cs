@@ -37,20 +37,25 @@
             // StartButton
             // 
             StartButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            StartButton.AutoSize = true;
-            StartButton.BackColor = Color.Transparent;
-            StartButton.BackgroundImageLayout = ImageLayout.None;
-            StartButton.FlatStyle = FlatStyle.Popup;
-            StartButton.Font = new Font("Verdana", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            StartButton.ForeColor = Color.Black;
+            StartButton.AutoSize = false; // AutoSize should be false to control the button size manually
+            StartButton.BackColor = Color.FromArgb(45, 45, 48); // A sleek dark background color
+            StartButton.FlatAppearance.BorderSize = 0; // No border for a cleaner look
+            StartButton.FlatStyle = FlatStyle.Flat; // Flat style for a modern look
+            StartButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0); // Using Segoe UI for a modern font
+            StartButton.ForeColor = Color.White; // White text for good contrast
             StartButton.Location = new Point(317, 410);
             StartButton.Margin = new Padding(5);
             StartButton.Name = "StartButton";
-            StartButton.Size = new Size(302, 44);
+            StartButton.Size = new Size(320, 50); // Adjusted size for better proportion
             StartButton.TabIndex = 0;
             StartButton.Text = "START";
             StartButton.UseVisualStyleBackColor = false;
             StartButton.Click += button1_Click;
+
+            // Optional: Add a hover effect for better user experience
+            StartButton.MouseEnter += (s, e) => { StartButton.BackColor = Color.FromArgb(70, 70, 73); };
+            StartButton.MouseLeave += (s, e) => { StartButton.BackColor = Color.FromArgb(45, 45, 48); };
+
             // 
             // tableLayoutPanel1
             // 
@@ -86,6 +91,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "StartPage";
             Text = "Toghether-Culture";
+            WindowState = FormWindowState.Maximized;
             Load += StartPage_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
