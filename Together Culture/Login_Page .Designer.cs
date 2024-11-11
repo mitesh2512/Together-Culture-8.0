@@ -34,6 +34,10 @@
             pictureBox3 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
+            LoginButton = new Button();
+            Remember = new CheckBox();
+            ForgotPass = new LinkLabel();
+            RegisterPage = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
@@ -84,11 +88,55 @@
             label2.TabIndex = 6;
             label2.Text = "Password";
             // 
+            // LoginButton
+            // 
+            LoginButton.Location = new Point(1210, 501);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(94, 29);
+            LoginButton.TabIndex = 7;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.Click += Login_Button;
+            // 
+            // Remember
+            // 
+            Remember.AutoSize = true;
+            Remember.Location = new Point(1140, 561);
+            Remember.Name = "Remember";
+            Remember.Size = new Size(104, 24);
+            Remember.TabIndex = 8;
+            Remember.Text = "Remember";
+            Remember.UseVisualStyleBackColor = true;
+            // 
+            // ForgotPass
+            // 
+            ForgotPass.AutoSize = true;
+            ForgotPass.Location = new Point(1246, 561);
+            ForgotPass.Name = "ForgotPass";
+            ForgotPass.Size = new Size(125, 20);
+            ForgotPass.TabIndex = 9;
+            ForgotPass.TabStop = true;
+            ForgotPass.Text = "Forgot Password?";
+            // 
+            // RegisterPage
+            // 
+            RegisterPage.Location = new Point(1210, 622);
+            RegisterPage.Name = "RegisterPage";
+            RegisterPage.Size = new Size(95, 29);
+            RegisterPage.TabIndex = 10;
+            RegisterPage.Text = "Register";
+            RegisterPage.UseVisualStyleBackColor = true;
+            RegisterPage.Click += Register_button;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1430, 996);
+            Controls.Add(RegisterPage);
+            Controls.Add(ForgotPass);
+            Controls.Add(Remember);
+            Controls.Add(LoginButton);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox2);
@@ -106,11 +154,14 @@
         }
 
         #endregion
-        private TableLayoutPanel tableLayoutPanel1;
         private TextBox UserName;
         private TextBox textBox2;
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
+        private Button LoginButton;
+        private CheckBox Remember;
+        private LinkLabel ForgotPass;
+        private Button RegisterPage;
     }
 }

@@ -52,10 +52,6 @@
             StartButton.UseVisualStyleBackColor = false;
             StartButton.Click += button1_Click;
 
-            // Optional: Add a hover effect for better user experience
-            StartButton.MouseEnter += (s, e) => { StartButton.BackColor = Color.FromArgb(70, 70, 73); };
-            StartButton.MouseLeave += (s, e) => { StartButton.BackColor = Color.FromArgb(45, 45, 48); };
-
             // 
             // tableLayoutPanel1
             // 

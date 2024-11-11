@@ -71,5 +71,15 @@ namespace Together_Culture
         {
 
         }
+
+        private void Login_Button(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Register_button(object sender, EventArgs e)
+        {
+
+        }
     }
 }
