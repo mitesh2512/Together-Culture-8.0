@@ -79,7 +79,9 @@ namespace Together_Culture
 
         private void Register_button(object sender, EventArgs e)
         {
-
+            Register startform = new Register();
+            startform.Show();
+            this.Hide();
         }
     }
 }

@@ -21,5 +21,15 @@ namespace Together_Culture
         {
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

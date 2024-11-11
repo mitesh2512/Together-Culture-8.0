@@ -37,21 +37,19 @@
             // StartButton
             // 
             StartButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            StartButton.AutoSize = false; // AutoSize should be false to control the button size manually
-            StartButton.BackColor = Color.FromArgb(45, 45, 48); // A sleek dark background color
-            StartButton.FlatAppearance.BorderSize = 0; // No border for a cleaner look
-            StartButton.FlatStyle = FlatStyle.Flat; // Flat style for a modern look
-            StartButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0); // Using Segoe UI for a modern font
-            StartButton.ForeColor = Color.White; // White text for good contrast
-            StartButton.Location = new Point(317, 410);
+            StartButton.BackColor = Color.FromArgb(45, 45, 48);
+            StartButton.FlatAppearance.BorderSize = 0;
+            StartButton.FlatStyle = FlatStyle.Flat;
+            StartButton.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            StartButton.ForeColor = Color.White;
+            StartButton.Location = new Point(498, 590);
             StartButton.Margin = new Padding(5);
             StartButton.Name = "StartButton";
-            StartButton.Size = new Size(320, 50); // Adjusted size for better proportion
+            StartButton.Size = new Size(483, 50);
             StartButton.TabIndex = 0;
             StartButton.Text = "START";
             StartButton.UseVisualStyleBackColor = false;
             StartButton.Click += button1_Click;
-
             // 
             // tableLayoutPanel1
             // 
@@ -68,7 +66,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(937, 519);
+            tableLayoutPanel1.Size = new Size(1479, 739);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // StartPage
@@ -79,7 +77,7 @@
             BackColor = Color.Red;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(937, 519);
+            ClientSize = new Size(1479, 739);
             Controls.Add(tableLayoutPanel1);
             DoubleBuffered = true;
             ForeColor = Color.Transparent;
@@ -90,7 +88,6 @@
             WindowState = FormWindowState.Maximized;
             Load += StartPage_Load;
             tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
