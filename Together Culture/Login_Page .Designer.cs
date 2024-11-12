@@ -73,7 +73,7 @@
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1022, 999);
+            pictureBox3.Size = new Size(1025, 999);
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
@@ -128,6 +128,7 @@
             ForgotPass.TabIndex = 9;
             ForgotPass.TabStop = true;
             ForgotPass.Text = "Forgot Password?";
+            ForgotPass.LinkClicked += ForgotPass_LinkClicked;
             // 
             // RegisterPage
             // 
@@ -176,7 +177,7 @@
             splitContainer1.Panel2.Controls.Add(groupBox1);
             splitContainer1.Panel2MinSize = 300;
             splitContainer1.Size = new Size(1580, 999);
-            splitContainer1.SplitterDistance = 1022;
+            splitContainer1.SplitterDistance = 1025;
             splitContainer1.SplitterWidth = 1;
             splitContainer1.TabIndex = 12;
             // 

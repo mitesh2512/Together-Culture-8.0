@@ -93,5 +93,12 @@ namespace Together_Culture
         {
 
         }
+
+        private void ForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           Reset_pass startform = new Reset_pass();
+            startform.Show();
+            this.Hide();
+        }
     }
 }
