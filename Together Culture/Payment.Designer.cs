@@ -37,35 +37,40 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(358, 71);
+            textBox1.Location = new Point(352, 174);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(147, 23);
+            textBox1.Size = new Size(210, 27);
             textBox1.TabIndex = 0;
             textBox1.Text = "Choose Payment Option";
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(224, 173);
+            button1.Location = new Point(256, 250);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(175, 49);
+            button1.Size = new Size(200, 65);
             button1.TabIndex = 1;
             button1.Text = "Debit / Credit Card";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(542, 161);
+            button2.Location = new Point(491, 344);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(152, 61);
+            button2.Size = new Size(200, 65);
             button2.TabIndex = 2;
             button2.Text = "Internet Banking";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(292, 277);
+            button3.Location = new Point(256, 344);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(75, 23);
+            button3.Size = new Size(200, 65);
             button3.TabIndex = 3;
             button3.Text = "Apple Pay";
             button3.UseVisualStyleBackColor = true;
@@ -73,23 +78,25 @@
             // 
             // button4
             // 
-            button4.Location = new Point(580, 279);
+            button4.Location = new Point(491, 250);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(75, 23);
+            button4.Size = new Size(200, 65);
             button4.TabIndex = 4;
             button4.Text = "Google Pay";
             button4.UseVisualStyleBackColor = true;
             // 
             // Payment
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Payment";
             Text = "Payment";
             ResumeLayout(false);
