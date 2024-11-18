@@ -49,7 +49,7 @@
             splitContainer1.SuspendLayout();
             SuspendLayout();
             // 
-            // UserName
+            // UserName..
             // 
             UserName.Location = new Point(140, 188);
             UserName.Name = "UserName";
