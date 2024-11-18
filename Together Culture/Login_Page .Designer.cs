@@ -40,6 +40,7 @@
             RegisterPage = new Button();
             groupBox1 = new GroupBox();
             splitContainer1 = new SplitContainer();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -73,7 +74,7 @@
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1025, 999);
+            pictureBox3.Size = new Size(1028, 999);
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
@@ -144,6 +145,7 @@
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(RegisterPage);
             groupBox1.Controls.Add(UserName);
@@ -177,9 +179,18 @@
             splitContainer1.Panel2.Controls.Add(groupBox1);
             splitContainer1.Panel2MinSize = 300;
             splitContainer1.Size = new Size(1580, 999);
-            splitContainer1.SplitterDistance = 1025;
+            splitContainer1.SplitterDistance = 1028;
             splitContainer1.SplitterWidth = 1;
             splitContainer1.TabIndex = 12;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(140, 386);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 20);
+            label3.TabIndex = 11;
+            label3.Click += label3_Click;
             // 
             // Login
             // 
@@ -215,5 +226,6 @@
         private Button RegisterPage;
         private GroupBox groupBox1;
         private SplitContainer splitContainer1;
+        private Label label3;
     }
 }

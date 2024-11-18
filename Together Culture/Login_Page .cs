@@ -79,7 +79,7 @@ namespace Together_Culture
             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\MitesH\\source\\repos\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBae\\together.db.mdf\";Integrated Security=True;Connect Timeout=30");
             con.Open();
             string query = "SELECT COUNT(*) FROM Try WHERE email=@Email AND password=@Password";
-            SqlCommand cmd = new SqlCommand(query,con); 
+            SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@email", UserName.Text);
             cmd.Parameters.AddWithValue("@password", textBox2.Text);
             int count = (int)cmd.ExecuteScalar();
@@ -87,7 +87,15 @@ namespace Together_Culture
             if (count > 0)
             {
                 Remember.Text = "Success";
+                Dashboard Dash = new Dashboard();
+                Dash.Show();
+                this.Close();
             }
+            else
+            {
+                label3.Text = "Failed Successfully";
+            }
+
 
 
 
@@ -112,9 +120,14 @@ namespace Together_Culture
 
         private void ForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           Reset_pass startform = new Reset_pass();
+            Reset_pass startform = new Reset_pass();
             startform.Show();
             this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
