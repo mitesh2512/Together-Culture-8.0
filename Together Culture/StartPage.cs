@@ -6,7 +6,7 @@ namespace Together_Culture
         {
             InitializeComponent();
         }
-
+              
         private void StartPage_Load(object sender, EventArgs e)
         {
 
