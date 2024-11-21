@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 
-!*.mdf
+#!*.mdf
 !*.db
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -264,7 +264,7 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
+#*.mdf
 *.ldf
 *.ndf
 
