@@ -43,6 +43,8 @@
             label5 = new Label();
             label6 = new Label();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -118,7 +120,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(134, 280);
+            label4.Location = new Point(122, 280);
             label4.Name = "label4";
             label4.Size = new Size(49, 15);
             label4.TabIndex = 9;
@@ -152,11 +154,20 @@
             button1.Text = "Edit Profile";
             button1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(566, 34);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 106);
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            // 
             // Admin_Profile
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 563);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -175,6 +186,7 @@
             Name = "Admin_Profile";
             Text = "Admin Profile";
             Load += Admin_Profile_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -194,5 +206,6 @@
         private Label label5;
         private Label label6;
         private Button button1;
+        private PictureBox pictureBox1;
     }
 }
