@@ -76,9 +76,9 @@ namespace Together_Culture
 
         private void Login_Button(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\MitesH\\source\\repos\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBae\\together.db.mdf\";Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\MitesH\\source\\repos\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True;Connect Timeout=30");
             con.Open();
-            string query = "SELECT COUNT(*) FROM Try WHERE email=@Email AND password=@Password";
+            string query = "SELECT COUNT(*) FROM Together WHERE email=@Email AND password=@Password";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@email", UserName.Text);
             cmd.Parameters.AddWithValue("@password", textBox2.Text);
