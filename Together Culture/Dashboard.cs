@@ -26,5 +26,11 @@ namespace Together_Culture
         {
 
         }
+
+        private void mem_onClick(object sender, EventArgs e)
+        {
+            Membership_Type_Management membership_Type_Management = new Membership_Type_Management();
+            membership_Type_Management.Show();
+        }
     }
 }

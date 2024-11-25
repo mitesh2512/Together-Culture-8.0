@@ -34,10 +34,10 @@
             button1 = new Button();
             button2 = new Button();
             dataGridView1 = new DataGridView();
-            label3 = new Label();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -103,15 +103,6 @@
             dataGridView1.Size = new Size(643, 234);
             dataGridView1.TabIndex = 5;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(321, 173);
-            label3.Name = "label3";
-            label3.Size = new Size(180, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Members Table ( Search Results )";
-            // 
             // Column1
             // 
             Column1.Frozen = true;
@@ -137,6 +128,15 @@
             Column3.ReadOnly = true;
             Column3.Width = 200;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(321, 173);
+            label3.Name = "label3";
+            label3.Size = new Size(179, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Members Table ( Search Results )";
+            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -161,7 +161,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(771, 541);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);

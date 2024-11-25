@@ -60,6 +60,7 @@
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += mem_onClick;
             // 
             // button2
             // 
@@ -139,7 +140,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(450, 89);
             label3.Name = "label3";
-            label3.Size = new Size(115, 15);
+            label3.Size = new Size(112, 15);
             label3.TabIndex = 10;
             label3.Text = "Top Tags and Trends";
             // 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+
 
 namespace Together_Culture
 {
@@ -24,7 +26,25 @@ namespace Together_Culture
 
         private void Membership_Type_Management_Load(object sender, EventArgs e)
         {
+            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            Membership.Open();
 
+            String sqlquery = "SELECT (Member_ID, Member_Name, Membership_Type) FROM Members";
+
+            SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery,Membership);
+
+            DataTable dt = new DataTable();
+            sqldata.Fill(dt);
+
+            dataGridView1.DataSource = dt;
+            
+
+            
+
+
+
+
+            Membership.Close();
         }
     }
 }
