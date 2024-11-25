@@ -29,12 +29,20 @@ namespace Together_Culture
             SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             Membership.Open();
 
-            String sqlquery = "SELECT (Member_ID, Member_Name, Membership_Type) FROM Members";
+            String sqlquery = "SELECT Member_ID, Member_Name, Membership_Type FROM Members";
 
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery,Membership);
 
             DataTable dt = new DataTable();
             sqldata.Fill(dt);
+
+            String memcount_query = "SELECT COUNT(*) FROM Members";
+
+            SqlCommand memcountdata = new SqlCommand(memcount_query,Membership);
+            
+            int mem_count = (int)memcountdata.ExecuteScalar();
+
+            label5.Text = $"{mem_count}";
 
             dataGridView1.DataSource = dt;
             

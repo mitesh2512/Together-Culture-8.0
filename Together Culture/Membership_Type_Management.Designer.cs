@@ -33,13 +33,10 @@
             comboBox1 = new ComboBox();
             button1 = new Button();
             button2 = new Button();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -93,41 +90,6 @@
             button2.Text = "Reset";
             button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(83, 191);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(643, 234);
-            dataGridView1.TabIndex = 5;
-            // 
-            // Column1
-            // 
-            Column1.Frozen = true;
-            Column1.HeaderText = "Member Name";
-            Column1.MinimumWidth = 10;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Member Email";
-            Column2.MinimumWidth = 10;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Membership Type";
-            Column3.MinimumWidth = 10;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            Column3.Width = 200;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -157,15 +119,28 @@
             label5.Size = new Size(0, 21);
             label5.TabIndex = 8;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView1.Location = new Point(83, 241);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(616, 257);
+            dataGridView1.TabIndex = 9;
+            // 
             // Membership_Type_Management
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(771, 541);
+            Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox1);
@@ -186,12 +161,9 @@
         private ComboBox comboBox1;
         private Button button1;
         private Button button2;
-        private DataGridView dataGridView1;
         private Label label3;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
         private Label label4;
         private Label label5;
+        private DataGridView dataGridView1;
     }
 }
