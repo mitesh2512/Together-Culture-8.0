@@ -27,11 +27,11 @@ namespace Together_Culture
         private void Membership_Type_Management_Load(object sender, EventArgs e)
         {
             // Establish SQL connection
-            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\hi\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             Membership.Open();
 
             // Query to load all members
-            String sqlquery = "SELECT Member_ID, Member_Name, Membership_Type FROM Members";
+            String sqlquery = "SELECT Member_ID, Member_Name, MembershipType FROM Members";
 
             // Load all members into DataGridView
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery, Membership);
@@ -68,11 +68,11 @@ namespace Together_Culture
             SELECT 
                 Member_ID, 
                 Member_Name, 
-                Membership_Type 
+                MembershipType 
             FROM 
                 Members 
             WHERE 
-                Membership_Type = @MembershipType";
+                MembershipType = @MembershipType";
 
                 // SQL query to count members in the selected type
                 string countQuery = @"
@@ -84,7 +84,7 @@ namespace Together_Culture
                 Membership_Type = @MembershipType";
 
                 // Establish connection and execute queries
-                SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\hi\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+                SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
                 Membership.Open();
 
                 // Filter data for DataGridView
@@ -116,10 +116,10 @@ namespace Together_Culture
         private void LoadAllMembers()
         {
             // Load all members into the DataGridView
-            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\hi\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             Membership.Open();
 
-            String sqlquery = "SELECT Member_ID, Member_Name, Membership_Type FROM Members";
+            String sqlquery = "SELECT Member_ID, Member_Name, MembershipType FROM Members";
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery, Membership);
             DataTable dt = new DataTable();
             sqldata.Fill(dt);
