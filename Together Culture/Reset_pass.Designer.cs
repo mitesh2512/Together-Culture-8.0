@@ -1,6 +1,6 @@
 ﻿namespace Together_Culture
 {
-    partial class Reset_pass
+    partial class Reset_Password
     {
         /// <summary>
         /// Required designer variable.
@@ -28,89 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reset_pass));
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reset_Password));
+            LinkButton = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            Memberid = new TextBox();
+            Ress_Pass = new Label();
+            pictureBox1 = new PictureBox();
+            LinkSent = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // LinkButton
             // 
-            button1.Location = new Point(213, 326);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            LinkButton.Location = new Point(192, 401);
+            LinkButton.Name = "LinkButton";
+            LinkButton.Size = new Size(94, 29);
+            LinkButton.TabIndex = 0;
+            LinkButton.Text = "Send Link";
+            LinkButton.UseVisualStyleBackColor = true;
+            LinkButton.Click += button1_Click;
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(137, 279);
+            radioButton1.Location = new Point(139, 371);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(117, 24);
+            radioButton1.Size = new Size(59, 24);
             radioButton1.TabIndex = 1;
             radioButton1.TabStop = true;
-            radioButton1.Text = "radioButton1";
+            radioButton1.Text = "Mail";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(260, 279);
+            radioButton2.Location = new Point(261, 371);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(117, 24);
+            radioButton2.Size = new Size(88, 24);
             radioButton2.TabIndex = 2;
             radioButton2.TabStop = true;
-            radioButton2.Text = "radioButton2";
+            radioButton2.Text = "Message";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
-            // textBox1
+            // Memberid
             // 
-            textBox1.Location = new Point(204, 212);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 3;
+            Memberid.Location = new Point(139, 329);
+            Memberid.Name = "Memberid";
+            Memberid.Size = new Size(210, 27);
+            Memberid.TabIndex = 3;
             // 
-            // label1
+            // Ress_Pass
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(204, 189);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 4;
-            label1.Text = "label1";
-            label1.Click += label1_Click;
+            Ress_Pass.AutoSize = true;
+            Ress_Pass.Location = new Point(139, 306);
+            Ress_Pass.Name = "Ress_Pass";
+            Ress_Pass.Size = new Size(80, 20);
+            Ress_Pass.TabIndex = 4;
+            Ress_Pass.Text = "MemberID";
+            Ress_Pass.Click += label1_Click;
             // 
-            // Reset_pass
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(171, 219);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // LinkSent
+            // 
+            LinkSent.AutoSize = true;
+            LinkSent.Location = new Point(139, 454);
+            LinkSent.Name = "LinkSent";
+            LinkSent.Size = new Size(0, 20);
+            LinkSent.TabIndex = 6;
+            // 
+            // Reset_Password
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             ClientSize = new Size(489, 648);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(LinkSent);
+            Controls.Add(pictureBox1);
+            Controls.Add(Ress_Pass);
+            Controls.Add(Memberid);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
-            Controls.Add(button1);
+            Controls.Add(LinkButton);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Reset_pass";
+            Name = "Reset_Password";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Reset_pass";
             Load += Reset_pass_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private Button LinkButton;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private TextBox textBox1;
-        private Label label1;
+        private TextBox Memberid;
+        private Label Ress_Pass;
+        private PictureBox pictureBox1;
+        private Label LinkSent;
     }
 }

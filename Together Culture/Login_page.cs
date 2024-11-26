@@ -24,7 +24,7 @@ namespace Together_Culture
 
         private void ForgotPassLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Reset_pass startform = new Reset_pass();
+            Reset_Password startform = new Reset_Password();
             startform.Show();
             this.Hide();
         }
@@ -38,7 +38,7 @@ namespace Together_Culture
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\MitesH\\source\\repos\\mitesh2512\\NEW\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             con.Open();
             string query = "SELECT COUNT(*) FROM Together WHERE email=@Email AND password=@Password";
             SqlCommand cmd = new SqlCommand(query, con);
