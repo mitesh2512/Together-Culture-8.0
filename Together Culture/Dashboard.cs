@@ -43,8 +43,7 @@ namespace Together_Culture
                 Login_page login_Page = new Login_page(); // Replace with the actual name of your login form
                 login_Page.Show();
 
-                // Close the current form
-                this.Close();
+
             }
         }
 
@@ -73,6 +72,16 @@ namespace Together_Culture
                 // Close the application
                 Application.Exit();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

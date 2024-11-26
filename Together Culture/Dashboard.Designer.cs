@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             listBox1 = new ListBox();
-            button1 = new Button();
-            button2 = new Button();
+            SearchMem = new Button();
+            Event = new Button();
             listBox2 = new ListBox();
             button3 = new Button();
             listBox3 = new ListBox();
@@ -47,55 +47,58 @@
             button8 = new Button();
             UserProfile = new Button();
             button6 = new Button();
+            panel2 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(522, 349);
+            listBox1.Location = new Point(296, 165);
             listBox1.Margin = new Padding(3, 4, 3, 4);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(137, 204);
+            listBox1.Size = new Size(310, 184);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // button1
+            // SearchMem
             // 
-            button1.Location = new Point(543, 510);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 31);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += mem_onClick;
+            SearchMem.Location = new Point(321, 292);
+            SearchMem.Margin = new Padding(3, 4, 3, 4);
+            SearchMem.Name = "SearchMem";
+            SearchMem.Size = new Size(259, 39);
+            SearchMem.TabIndex = 1;
+            SearchMem.Text = "Search Member";
+            SearchMem.UseVisualStyleBackColor = true;
+            SearchMem.Click += mem_onClick;
             // 
-            // button2
+            // Event
             // 
-            button2.Location = new Point(765, 510);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(86, 31);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            Event.Location = new Point(321, 610);
+            Event.Margin = new Padding(3, 4, 3, 4);
+            Event.Name = "Event";
+            Event.Size = new Size(259, 39);
+            Event.TabIndex = 3;
+            Event.Text = "Event Search";
+            Event.UseVisualStyleBackColor = true;
+            Event.Click += button2_Click;
             // 
             // listBox2
             // 
             listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(743, 349);
+            listBox2.Location = new Point(296, 476);
             listBox2.Margin = new Padding(3, 4, 3, 4);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(137, 204);
+            listBox2.Size = new Size(310, 184);
             listBox2.TabIndex = 2;
             // 
             // button3
             // 
-            button3.Location = new Point(952, 510);
+            button3.Location = new Point(909, 292);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(86, 31);
+            button3.Size = new Size(259, 39);
             button3.TabIndex = 5;
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
@@ -103,18 +106,18 @@
             // listBox3
             // 
             listBox3.FormattingEnabled = true;
-            listBox3.Location = new Point(930, 349);
+            listBox3.Location = new Point(883, 165);
             listBox3.Margin = new Padding(3, 4, 3, 4);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(137, 204);
+            listBox3.Size = new Size(310, 184);
             listBox3.TabIndex = 4;
             // 
             // button4
             // 
-            button4.Location = new Point(1135, 510);
+            button4.Location = new Point(909, 610);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(86, 31);
+            button4.Size = new Size(259, 39);
             button4.TabIndex = 7;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
@@ -122,16 +125,16 @@
             // listBox4
             // 
             listBox4.FormattingEnabled = true;
-            listBox4.Location = new Point(1114, 349);
+            listBox4.Location = new Point(883, 476);
             listBox4.Margin = new Padding(3, 4, 3, 4);
             listBox4.Name = "listBox4";
-            listBox4.Size = new Size(137, 204);
+            listBox4.Size = new Size(310, 184);
             listBox4.TabIndex = 6;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(522, 325);
+            label1.Location = new Point(296, 141);
             label1.Name = "label1";
             label1.Size = new Size(130, 20);
             label1.TabIndex = 8;
@@ -141,7 +144,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(750, 325);
+            label2.Location = new Point(296, 452);
             label2.Name = "label2";
             label2.Size = new Size(110, 20);
             label2.TabIndex = 9;
@@ -150,7 +153,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(935, 325);
+            label3.Location = new Point(883, 141);
             label3.Name = "label3";
             label3.Size = new Size(143, 20);
             label3.TabIndex = 10;
@@ -159,7 +162,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(1114, 325);
+            label4.Location = new Point(883, 452);
             label4.Name = "label4";
             label4.Size = new Size(147, 20);
             label4.TabIndex = 11;
@@ -236,39 +239,50 @@
             button6.Text = "button6";
             button6.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(Event);
+            panel2.Controls.Add(SearchMem);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(listBox1);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(listBox4);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(listBox3);
+            panel2.Controls.Add(listBox2);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1823, 901);
+            panel2.TabIndex = 14;
+            panel2.Paint += panel2_Paint;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1823, 901);
             Controls.Add(panel1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button4);
-            Controls.Add(listBox4);
-            Controls.Add(button3);
-            Controls.Add(listBox3);
-            Controls.Add(button2);
-            Controls.Add(listBox2);
-            Controls.Add(button1);
-            Controls.Add(listBox1);
+            Controls.Add(panel2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
             Text = "Dashboard";
             WindowState = FormWindowState.Maximized;
             FormClosing += Dashboard_FormClosing;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private ListBox listBox1;
-        private Button button1;
-        private Button button2;
+        private Button SearchMem;
+        private Button Event;
         private ListBox listBox2;
         private Button button3;
         private ListBox listBox3;
@@ -285,5 +299,6 @@
         private Button button8;
         private Button UserProfile;
         private Button button6;
+        private Panel panel2;
     }
 }
