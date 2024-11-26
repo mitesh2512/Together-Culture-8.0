@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             treeView2 = new TreeView();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            treeView1 = new TreeView();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -49,6 +48,7 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             label8 = new Label();
             pictureBox1 = new PictureBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,14 +59,6 @@
             treeView2.Name = "treeView2";
             treeView2.Size = new Size(528, 26);
             treeView2.TabIndex = 34;
-            // 
-            // treeView1
-            // 
-            treeView1.Location = new Point(60, 321);
-            treeView1.Margin = new Padding(3, 2, 3, 2);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(530, 26);
-            treeView1.TabIndex = 33;
             // 
             // label7
             // 
@@ -198,6 +190,7 @@
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
+            contextMenuStrip1.Opening += contextMenuStrip1_Opening;
             // 
             // label8
             // 
@@ -216,15 +209,24 @@
             pictureBox1.TabIndex = 36;
             pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(60, 329);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(528, 23);
+            comboBox1.TabIndex = 37;
+            comboBox1.SelectedIndexChanged += Intrest_SelectedIndexChanged;
+            // 
             // EditProfile
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(733, 566);
+            Controls.Add(comboBox1);
             Controls.Add(pictureBox1);
             Controls.Add(label8);
             Controls.Add(treeView2);
-            Controls.Add(treeView1);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -251,7 +253,6 @@
 
         private TreeView treeView2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private TreeView treeView1;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -269,5 +270,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private Label label8;
         private PictureBox pictureBox1;
+        protected ComboBox comboBox1;
     }
 }
