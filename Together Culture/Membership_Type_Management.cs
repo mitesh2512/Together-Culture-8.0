@@ -27,7 +27,7 @@ namespace Together_Culture
         private void Membership_Type_Management_Load(object sender, EventArgs e)
         {
             // Establish SQL connection
-            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             Membership.Open();
 
             // Query to load all members
@@ -60,7 +60,7 @@ namespace Together_Culture
         private void LoadAllMembers()
         {
             // Load all members into the DataGridView
-            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             Membership.Open();
 
             String sqlquery = "SELECT Member_ID, Member_Name, MembershipType FROM Members";
@@ -100,7 +100,7 @@ namespace Together_Culture
                 MembershipType = @MembershipType";
 
                 // Establish connection and execute queries
-                SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\My Documents\\Development\\New folder\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+                SqlConnection Membership = new SqlConnection("d Security");
                 Membership.Open();
 
                 // Filter data for DataGridView

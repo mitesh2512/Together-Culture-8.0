@@ -38,13 +38,9 @@
             comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
             button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             label5 = new Label();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -77,7 +73,6 @@
             label3.Size = new Size(113, 28);
             label3.TabIndex = 2;
             label3.Text = "Assign Tag :";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -88,7 +83,6 @@
             label4.Size = new Size(273, 28);
             label4.TabIndex = 3;
             label4.Text = "Tag Management and Insights";
-            label4.Click += label4_Click;
             // 
             // textBox1
             // 
@@ -131,6 +125,7 @@
             comboBox3.Size = new Size(177, 33);
             comboBox3.TabIndex = 7;
             comboBox3.Text = "Tag Dropdown";
+            comboBox3.SelectedIndexChanged += onIndex_change;
             // 
             // button1
             // 
@@ -142,17 +137,7 @@
             button1.TabIndex = 8;
             button1.Text = "Create Tag";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 10F);
-            button2.Location = new Point(621, 159);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 37);
-            button2.TabIndex = 9;
-            button2.Text = "Search";
-            button2.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -164,12 +149,13 @@
             button3.TabIndex = 10;
             button3.Text = "Assign Tag";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += AssignTag_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(621, 237);
+            label5.Location = new Point(624, 178);
             label5.Name = "label5";
             label5.Size = new Size(119, 23);
             label5.TabIndex = 11;
@@ -178,34 +164,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(490, 267);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(525, 218);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(386, 303);
+            dataGridView1.Size = new Size(300, 188);
             dataGridView1.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Member Name";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Member Email";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Assigned Tags";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
             // 
             // Tags
             // 
@@ -216,7 +179,6 @@
             Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
@@ -231,6 +193,7 @@
             Name = "Tags";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tags";
+            Load += Tags_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -247,12 +210,8 @@
         private ComboBox comboBox2;
         private ComboBox comboBox3;
         private Button button1;
-        private Button button2;
         private Button button3;
         private Label label5;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
     }
 }
