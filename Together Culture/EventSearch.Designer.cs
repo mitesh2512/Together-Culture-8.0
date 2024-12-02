@@ -127,6 +127,7 @@ namespace Together_Culture
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(489, 412);
             dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label4
             // 
