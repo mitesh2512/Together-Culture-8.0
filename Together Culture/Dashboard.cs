@@ -39,9 +39,11 @@ namespace Together_Culture
 
             if (result == DialogResult.Yes)
             {
+                
                 // Redirect to the login form
                 Login_page login_Page = new Login_page(); // Replace with the actual name of your login form
                 login_Page.Show();
+                this.Hide();
 
 
             }
@@ -49,39 +51,40 @@ namespace Together_Culture
 
         private void UserProfile_Click(object sender, EventArgs e)
         {
-            UserProfile UserProfile = new UserProfile();
-            UserProfile.Show();
-            this.Hide();
+            Admin_Profile admin_Profile = new Admin_Profile();
+            admin_Profile.Show();
+            
         }
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Optional: Display a confirmation dialog before closing
-            DialogResult result = MessageBox.Show("Are you sure you want to close the application?",
-                                                  "Exit Confirmation",
-                                                  MessageBoxButtons.YesNo,
-                                                  MessageBoxIcon.Question);
+            // Close the application
+            Application.Exit();
 
-            if (result == DialogResult.No)
-            {
-                // Cancel the close action
-                e.Cancel = true;
-            }
-            else
-            {
-                // Close the application
-                Application.Exit();
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            EventSearch eventSearch = new EventSearch();
+            eventSearch.Show();
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TagsButton_Click(object sender, EventArgs e)
+        {
+            Tags tags = new Tags();
+            tags.Show();
+            
         }
     }
 }

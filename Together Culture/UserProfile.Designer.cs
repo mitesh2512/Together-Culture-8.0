@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfile));
             contextMenuStrip1 = new ContextMenuStrip(components);
             button1 = new Button();
             textBox1 = new TextBox();
@@ -200,6 +201,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             ClientSize = new Size(748, 671);
             Controls.Add(button3);
             Controls.Add(treeView2);
@@ -218,7 +220,9 @@
             Controls.Add(textBox3);
             Controls.Add(textBox1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "UserProfile";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "User_Profile";
             ResumeLayout(false);
             PerformLayout();

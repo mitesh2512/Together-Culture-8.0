@@ -31,5 +31,12 @@ namespace Together_Culture
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Edit_Admin_Profile edit_Admin_Profile = new Edit_Admin_Profile();
+            edit_Admin_Profile.Show();
+            this.Close();
+        }
     }
 }

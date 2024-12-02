@@ -167,6 +167,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "Login_page";
             WindowState = FormWindowState.Maximized;
+            FormClosing += Login_page_FormClosing;
             Load += Login_page_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

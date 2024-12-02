@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Membership_Type_Management));
             label1 = new Label();
             label2 = new Label();
             comboBox1 = new ComboBox();
@@ -142,6 +143,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             ClientSize = new Size(881, 721);
             Controls.Add(dataGridView1);
             Controls.Add(label5);
@@ -152,8 +154,10 @@
             Controls.Add(comboBox1);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "Membership_Type_Management";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Membership_Type_Management";
             WindowState = FormWindowState.Maximized;
             Load += Membership_Type_Management_Load;

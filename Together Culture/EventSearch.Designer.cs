@@ -29,6 +29,7 @@ namespace Together_Culture
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventSearch));
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             label1 = new Label();
@@ -121,6 +122,7 @@ namespace Together_Culture
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.DimGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             dataGridView1.GridColor = SystemColors.InactiveBorder;
@@ -215,6 +217,7 @@ namespace Together_Culture
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             ClientSize = new Size(914, 600);
             Controls.Add(textBox1);
             Controls.Add(label6);
@@ -229,8 +232,10 @@ namespace Together_Culture
             Controls.Add(label1);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "EventSearch";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Event Search";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

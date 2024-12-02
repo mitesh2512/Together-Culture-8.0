@@ -16,5 +16,10 @@ namespace Together_Culture
         {
             InitializeComponent();
         }
+
+        private void Edit_Admin_Profile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

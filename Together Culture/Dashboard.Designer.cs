@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             listBox1 = new ListBox();
             SearchMem = new Button();
-            Event = new Button();
+            EventButton = new Button();
             listBox2 = new ListBox();
-            button3 = new Button();
+            TagsButton = new Button();
             listBox3 = new ListBox();
             button4 = new Button();
             listBox4 = new ListBox();
@@ -45,7 +46,7 @@
             Logout = new Button();
             button5 = new Button();
             button8 = new Button();
-            UserProfile = new Button();
+            AdminProfile = new Button();
             button6 = new Button();
             panel2 = new Panel();
             panel1.SuspendLayout();
@@ -73,16 +74,16 @@
             SearchMem.UseVisualStyleBackColor = true;
             SearchMem.Click += mem_onClick;
             // 
-            // Event
+            // EventButton
             // 
-            Event.Location = new Point(321, 610);
-            Event.Margin = new Padding(3, 4, 3, 4);
-            Event.Name = "Event";
-            Event.Size = new Size(259, 39);
-            Event.TabIndex = 3;
-            Event.Text = "Event Search";
-            Event.UseVisualStyleBackColor = true;
-            Event.Click += button2_Click;
+            EventButton.Location = new Point(321, 611);
+            EventButton.Margin = new Padding(3, 4, 3, 4);
+            EventButton.Name = "EventButton";
+            EventButton.Size = new Size(259, 39);
+            EventButton.TabIndex = 3;
+            EventButton.Text = "Event Search";
+            EventButton.UseVisualStyleBackColor = true;
+            EventButton.Click += button2_Click;
             // 
             // listBox2
             // 
@@ -93,15 +94,16 @@
             listBox2.Size = new Size(310, 184);
             listBox2.TabIndex = 2;
             // 
-            // button3
+            // TagsButton
             // 
-            button3.Location = new Point(909, 292);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(259, 39);
-            button3.TabIndex = 5;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            TagsButton.Location = new Point(909, 292);
+            TagsButton.Margin = new Padding(3, 4, 3, 4);
+            TagsButton.Name = "TagsButton";
+            TagsButton.Size = new Size(259, 39);
+            TagsButton.TabIndex = 5;
+            TagsButton.Text = "Tags and Trends";
+            TagsButton.UseVisualStyleBackColor = true;
+            TagsButton.Click += TagsButton_Click;
             // 
             // listBox3
             // 
@@ -114,7 +116,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(909, 610);
+            button4.Location = new Point(909, 611);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(259, 39);
@@ -174,7 +176,7 @@
             panel1.Controls.Add(Logout);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button8);
-            panel1.Controls.Add(UserProfile);
+            panel1.Controls.Add(AdminProfile);
             panel1.Controls.Add(button6);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -194,7 +196,7 @@
             // Logout
             // 
             Logout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            Logout.Location = new Point(1628, 41);
+            Logout.Location = new Point(1627, 41);
             Logout.Name = "Logout";
             Logout.Size = new Size(173, 47);
             Logout.TabIndex = 17;
@@ -204,7 +206,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(12, 41);
+            button5.Location = new Point(11, 41);
             button5.Name = "button5";
             button5.Size = new Size(173, 47);
             button5.TabIndex = 13;
@@ -220,15 +222,15 @@
             button8.Text = "button8";
             button8.UseVisualStyleBackColor = true;
             // 
-            // UserProfile
+            // AdminProfile
             // 
-            UserProfile.Location = new Point(1449, 41);
-            UserProfile.Name = "UserProfile";
-            UserProfile.Size = new Size(173, 47);
-            UserProfile.TabIndex = 16;
-            UserProfile.Text = "User Profile";
-            UserProfile.UseVisualStyleBackColor = true;
-            UserProfile.Click += UserProfile_Click;
+            AdminProfile.Location = new Point(1449, 41);
+            AdminProfile.Name = "AdminProfile";
+            AdminProfile.Size = new Size(173, 47);
+            AdminProfile.TabIndex = 16;
+            AdminProfile.Text = "Admin Profile";
+            AdminProfile.UseVisualStyleBackColor = true;
+            AdminProfile.Click += UserProfile_Click;
             // 
             // button6
             // 
@@ -241,7 +243,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(Event);
+            panel2.Controls.Add(EventButton);
             panel2.Controls.Add(SearchMem);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(listBox1);
@@ -249,7 +251,7 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(listBox4);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(button3);
+            panel2.Controls.Add(TagsButton);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(listBox3);
             panel2.Controls.Add(listBox2);
@@ -264,14 +266,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             ClientSize = new Size(1823, 901);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
             WindowState = FormWindowState.Maximized;
             FormClosing += Dashboard_FormClosing;
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -282,9 +288,9 @@
 
         private ListBox listBox1;
         private Button SearchMem;
-        private Button Event;
+        private Button EventButton;
         private ListBox listBox2;
-        private Button button3;
+        private Button TagsButton;
         private ListBox listBox3;
         private Button button4;
         private ListBox listBox4;
@@ -297,7 +303,7 @@
         private Button Logout;
         private Button button5;
         private Button button8;
-        private Button UserProfile;
+        private Button AdminProfile;
         private Button button6;
         private Panel panel2;
     }

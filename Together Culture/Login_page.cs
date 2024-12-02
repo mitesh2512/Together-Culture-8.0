@@ -26,7 +26,7 @@ namespace Together_Culture
         {
             Reset_Password startform = new Reset_Password();
             startform.Show();
-            this.Hide();
+            
         }
 
         private void RegisterPageButton_Click(object sender, EventArgs e)
@@ -74,6 +74,11 @@ namespace Together_Culture
         private void Login_page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_page_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

@@ -36,5 +36,24 @@ namespace Together_Culture
         {
 
         }
+
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LoginPage_Click(object sender, EventArgs e)
+        {
+            Login_page login_Page = new Login_page();
+            login_Page.Show();
+            this.Hide();
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            RegisterLable.Text = "Register Succesfully,Wait for Response";
+        }
+
+        
     }
 }
