@@ -38,15 +38,11 @@ namespace Together_Culture
             button1 = new Button();
             button2 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             label4 = new Label();
-            comboBox1 = new ComboBox();
             label5 = new Label();
             label6 = new Label();
             textBox1 = new TextBox();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -124,7 +120,6 @@ namespace Together_Culture
             // 
             dataGridView1.BackgroundColor = Color.DimGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             dataGridView1.GridColor = SystemColors.InactiveBorder;
             dataGridView1.Location = new Point(411, 73);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
@@ -132,38 +127,6 @@ namespace Together_Culture
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(489, 412);
             dataGridView1.TabIndex = 8;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Event Name";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Event Date";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Guest Name";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Guest Email";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            Column4.Width = 125;
             // 
             // label4
             // 
@@ -174,16 +137,6 @@ namespace Together_Culture
             label4.Size = new Size(264, 30);
             label4.TabIndex = 9;
             label4.Text = "Event Attendance Analysis";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 11F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(176, 133);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(198, 33);
-            comboBox1.TabIndex = 10;
             // 
             // label5
             // 
@@ -213,16 +166,23 @@ namespace Together_Culture
             textBox1.Size = new Size(114, 30);
             textBox1.TabIndex = 13;
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(176, 133);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(198, 27);
+            textBox2.TabIndex = 14;
+            // 
             // EventSearch
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Red;
             ClientSize = new Size(914, 600);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(comboBox1);
             Controls.Add(label4);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
@@ -258,13 +218,9 @@ namespace Together_Culture
         private Button button2;
         private DataGridView dataGridView1;
         private Label label4;
-        private ComboBox comboBox1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
         private Label label5;
         private Label label6;
         private TextBox textBox1;
+        private TextBox textBox2;
     }
 }
