@@ -364,3 +364,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Together Culture/DataBase.mdf
+/Together Culture/Database_log.ldf
