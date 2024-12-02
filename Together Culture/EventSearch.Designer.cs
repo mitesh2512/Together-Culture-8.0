@@ -40,8 +40,6 @@ namespace Together_Culture
             dataGridView1 = new DataGridView();
             label4 = new Label();
             label5 = new Label();
-            label6 = new Label();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -104,6 +102,7 @@ namespace Together_Culture
             button1.TabIndex = 5;
             button1.Text = "Search";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += btnSearch_Click;
             // 
             // button2
             // 
@@ -115,13 +114,14 @@ namespace Together_Culture
             button2.TabIndex = 6;
             button2.Text = "Reset";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += btnReset_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.DimGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = SystemColors.InactiveBorder;
-            dataGridView1.Location = new Point(411, 73);
+            dataGridView1.Location = new Point(411, 74);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
@@ -142,30 +142,11 @@ namespace Together_Culture
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(621, 49);
+            label5.Location = new Point(604, 49);
             label5.Name = "label5";
             label5.Size = new Size(125, 20);
             label5.TabIndex = 11;
             label5.Text = "SEARCH RESULTS";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10F);
-            label6.Location = new Point(464, 529);
-            label6.Name = "label6";
-            label6.Size = new Size(128, 23);
-            label6.TabIndex = 12;
-            label6.Text = "Total Attendees";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 10F);
-            textBox1.Location = new Point(643, 527);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 30);
-            textBox1.TabIndex = 13;
             // 
             // textBox2
             // 
@@ -181,8 +162,6 @@ namespace Together_Culture
             BackColor = Color.Red;
             ClientSize = new Size(914, 600);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(dataGridView1);
@@ -198,6 +177,7 @@ namespace Together_Culture
             Name = "EventSearch";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Event Search";
+            Load += EventSearch_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -220,8 +200,6 @@ namespace Together_Culture
         private DataGridView dataGridView1;
         private Label label4;
         private Label label5;
-        private Label label6;
-        private TextBox textBox1;
         private TextBox textBox2;
     }
 }
