@@ -30,27 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             listBox1 = new ListBox();
-            SearchMem = new Button();
+            SearchMemship = new Button();
             EventButton = new Button();
             listBox2 = new ListBox();
             TagsButton = new Button();
             listBox3 = new ListBox();
             button4 = new Button();
             listBox4 = new ListBox();
-            label1 = new Label();
+            Member = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
+            appseamem = new Label();
             panel1 = new Panel();
-            button7 = new Button();
             Logout = new Button();
-            button5 = new Button();
-            button8 = new Button();
             AdminProfile = new Button();
-            button6 = new Button();
             panel2 = new Panel();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox5 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // listBox1
@@ -59,24 +65,24 @@
             listBox1.Location = new Point(296, 165);
             listBox1.Margin = new Padding(3, 4, 3, 4);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(310, 184);
+            listBox1.Size = new Size(581, 344);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // SearchMem
+            // SearchMemship
             // 
-            SearchMem.Location = new Point(321, 292);
-            SearchMem.Margin = new Padding(3, 4, 3, 4);
-            SearchMem.Name = "SearchMem";
-            SearchMem.Size = new Size(259, 39);
-            SearchMem.TabIndex = 1;
-            SearchMem.Text = "Search Member";
-            SearchMem.UseVisualStyleBackColor = true;
-            SearchMem.Click += mem_onClick;
+            SearchMemship.Location = new Point(458, 461);
+            SearchMemship.Margin = new Padding(3, 4, 3, 4);
+            SearchMemship.Name = "SearchMemship";
+            SearchMemship.Size = new Size(259, 39);
+            SearchMemship.TabIndex = 1;
+            SearchMemship.Text = "Search Memberships";
+            SearchMemship.UseVisualStyleBackColor = true;
+            SearchMemship.Click += mem_onClick;
             // 
             // EventButton
             // 
-            EventButton.Location = new Point(321, 611);
+            EventButton.Location = new Point(458, 887);
             EventButton.Margin = new Padding(3, 4, 3, 4);
             EventButton.Name = "EventButton";
             EventButton.Size = new Size(259, 39);
@@ -88,15 +94,15 @@
             // listBox2
             // 
             listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(296, 476);
+            listBox2.Location = new Point(296, 554);
             listBox2.Margin = new Padding(3, 4, 3, 4);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(310, 184);
+            listBox2.Size = new Size(581, 384);
             listBox2.TabIndex = 2;
             // 
             // TagsButton
             // 
-            TagsButton.Location = new Point(909, 292);
+            TagsButton.Location = new Point(1053, 461);
             TagsButton.Margin = new Padding(3, 4, 3, 4);
             TagsButton.Name = "TagsButton";
             TagsButton.Size = new Size(259, 39);
@@ -111,42 +117,43 @@
             listBox3.Location = new Point(883, 165);
             listBox3.Margin = new Padding(3, 4, 3, 4);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(310, 184);
+            listBox3.Size = new Size(560, 344);
             listBox3.TabIndex = 4;
             // 
             // button4
             // 
-            button4.Location = new Point(909, 611);
+            button4.Location = new Point(1053, 887);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(259, 39);
             button4.TabIndex = 7;
-            button4.Text = "button4";
+            button4.Text = "Approve Search Member";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // listBox4
             // 
             listBox4.FormattingEnabled = true;
-            listBox4.Location = new Point(883, 476);
+            listBox4.Location = new Point(883, 554);
             listBox4.Margin = new Padding(3, 4, 3, 4);
             listBox4.Name = "listBox4";
-            listBox4.Size = new Size(310, 184);
+            listBox4.Size = new Size(581, 384);
             listBox4.TabIndex = 6;
             // 
-            // label1
+            // Member
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(296, 141);
-            label1.Name = "label1";
-            label1.Size = new Size(130, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Member Overview";
-            label1.Click += label1_Click;
+            Member.AutoSize = true;
+            Member.Location = new Point(296, 141);
+            Member.Name = "Member";
+            Member.Size = new Size(157, 20);
+            Member.TabIndex = 8;
+            Member.Text = "Membership Overview";
+            Member.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(296, 452);
+            label2.Location = new Point(296, 530);
             label2.Name = "label2";
             label2.Size = new Size(110, 20);
             label2.TabIndex = 9;
@@ -161,37 +168,25 @@
             label3.TabIndex = 10;
             label3.Text = "Top Tags and Trends";
             // 
-            // label4
+            // appseamem
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(883, 452);
-            label4.Name = "label4";
-            label4.Size = new Size(147, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Engagement Insights";
+            appseamem.AutoSize = true;
+            appseamem.Location = new Point(883, 530);
+            appseamem.Name = "appseamem";
+            appseamem.Size = new Size(174, 20);
+            appseamem.TabIndex = 11;
+            appseamem.Text = "Approve Search Member";
             // 
             // panel1
             // 
-            panel1.Controls.Add(button7);
+            panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(Logout);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button8);
             panel1.Controls.Add(AdminProfile);
-            panel1.Controls.Add(button6);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1823, 125);
+            panel1.Size = new Size(1526, 125);
             panel1.TabIndex = 13;
-            // 
-            // button7
-            // 
-            button7.Location = new Point(1091, 41);
-            button7.Name = "button7";
-            button7.Size = new Size(173, 47);
-            button7.TabIndex = 14;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
             // 
             // Logout
             // 
@@ -204,24 +199,6 @@
             Logout.UseVisualStyleBackColor = true;
             Logout.Click += Logout_Click;
             // 
-            // button5
-            // 
-            button5.Location = new Point(11, 41);
-            button5.Name = "button5";
-            button5.Size = new Size(173, 47);
-            button5.TabIndex = 13;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.Location = new Point(1270, 41);
-            button8.Name = "button8";
-            button8.Size = new Size(173, 47);
-            button8.TabIndex = 15;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
-            // 
             // AdminProfile
             // 
             AdminProfile.Location = new Point(1449, 41);
@@ -232,42 +209,89 @@
             AdminProfile.UseVisualStyleBackColor = true;
             AdminProfile.Click += UserProfile_Click;
             // 
-            // button6
-            // 
-            button6.Location = new Point(909, 41);
-            button6.Name = "button6";
-            button6.Size = new Size(173, 47);
-            button6.TabIndex = 13;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
-            panel2.Controls.Add(EventButton);
-            panel2.Controls.Add(SearchMem);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(listBox1);
             panel2.Controls.Add(button4);
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(EventButton);
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(TagsButton);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(SearchMemship);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(appseamem);
+            panel2.Controls.Add(listBox1);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(listBox4);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(TagsButton);
+            panel2.Controls.Add(Member);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(listBox3);
             panel2.Controls.Add(listBox2);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1823, 901);
+            panel2.Size = new Size(1526, 965);
             panel2.TabIndex = 14;
             panel2.Paint += panel2_Paint;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(883, 554);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(581, 384);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 15;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.White;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(296, 554);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(581, 384);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 14;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(883, 165);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(581, 344);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(296, 165);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(581, 344);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(12, 12);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(145, 76);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 18;
+            pictureBox5.TabStop = false;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.Red;
-            ClientSize = new Size(1823, 901);
+            ClientSize = new Size(1526, 965);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -281,30 +305,36 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private ListBox listBox1;
-        private Button SearchMem;
+        private Button SearchMemship;
         private Button EventButton;
         private ListBox listBox2;
         private Button TagsButton;
         private ListBox listBox3;
         private Button button4;
         private ListBox listBox4;
-        private Label label1;
+        private Label Member;
         private Label label2;
         private Label label3;
-        private Label label4;
+        private Label appseamem;
         private Panel panel1;
-        private Button button7;
         private Button Logout;
-        private Button button5;
-        private Button button8;
         private Button AdminProfile;
-        private Button button6;
         private Panel panel2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
     }
 }

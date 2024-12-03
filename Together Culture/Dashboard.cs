@@ -39,7 +39,7 @@ namespace Together_Culture
 
             if (result == DialogResult.Yes)
             {
-                
+
                 // Redirect to the login form
                 Login_page login_Page = new Login_page(); // Replace with the actual name of your login form
                 login_Page.Show();
@@ -53,7 +53,7 @@ namespace Together_Culture
         {
             Admin_Profile admin_Profile = new Admin_Profile();
             admin_Profile.Show();
-            
+
         }
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
@@ -67,7 +67,7 @@ namespace Together_Culture
         {
             EventSearch eventSearch = new EventSearch();
             eventSearch.Show();
-            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -84,7 +84,14 @@ namespace Together_Culture
         {
             Tags tags = new Tags();
             tags.Show();
-            
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ApproveandSearchMem approveandSearchMem = new ApproveandSearchMem();
+            approveandSearchMem.Show();
+
         }
     }
 }
