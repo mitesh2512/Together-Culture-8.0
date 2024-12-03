@@ -42,6 +42,7 @@
             label3 = new Label();
             appseamem = new Label();
             panel1 = new Panel();
+            pictureBox5 = new PictureBox();
             Logout = new Button();
             AdminProfile = new Button();
             panel2 = new Panel();
@@ -49,14 +50,13 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            pictureBox5 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // listBox1
@@ -182,16 +182,25 @@
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(Logout);
             panel1.Controls.Add(AdminProfile);
-            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1526, 125);
+            panel1.Size = new Size(1802, 125);
             panel1.TabIndex = 13;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(12, 12);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(145, 76);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 18;
+            pictureBox5.TabStop = false;
             // 
             // Logout
             // 
             Logout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            Logout.Location = new Point(1627, 41);
+            Logout.Location = new Point(1294, 41);
             Logout.Name = "Logout";
             Logout.Size = new Size(173, 47);
             Logout.TabIndex = 17;
@@ -201,7 +210,7 @@
             // 
             // AdminProfile
             // 
-            AdminProfile.Location = new Point(1449, 41);
+            AdminProfile.Location = new Point(1116, 41);
             AdminProfile.Name = "AdminProfile";
             AdminProfile.Size = new Size(173, 47);
             AdminProfile.TabIndex = 16;
@@ -230,7 +239,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1526, 965);
+            panel2.Size = new Size(1802, 1055);
             panel2.TabIndex = 14;
             panel2.Paint += panel2_Paint;
             // 
@@ -275,23 +284,13 @@
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(12, 12);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(145, 76);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 18;
-            pictureBox5.TabStop = false;
-            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.Red;
-            ClientSize = new Size(1526, 965);
+            ClientSize = new Size(1802, 1055);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -303,13 +302,13 @@
             FormClosing += Dashboard_FormClosing;
             Load += Dashboard_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 

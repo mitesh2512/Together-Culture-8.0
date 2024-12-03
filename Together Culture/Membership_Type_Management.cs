@@ -100,7 +100,7 @@ namespace Together_Culture
                 MembershipType = @MembershipType";
 
                 // Establish connection and execute queries
-                SqlConnection Membership = new SqlConnection("d Security");
+                SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
                 Membership.Open();
 
                 // Filter data for DataGridView
