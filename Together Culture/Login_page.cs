@@ -21,7 +21,7 @@ namespace Together_Culture
         {
             Register startform = new Register();
             startform.Show();
-            this.Hide();
+            
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -87,6 +87,7 @@ namespace Together_Culture
 
         private void Login_page_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
         }
     }
 }

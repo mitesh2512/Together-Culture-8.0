@@ -17,8 +17,10 @@ namespace Together_Culture
             InitializeComponent();
         }
 
-        private void AdminProfile_Click(object sender, EventArgs e)
+        private void UserProfile_Click(object sender, EventArgs e)
         {
+            UserProfile userProfile = new UserProfile();
+            userProfile.Show();
 
         }
 
@@ -43,6 +45,54 @@ namespace Together_Culture
             int memberId = 1;
             Member_Benefits member_Benefits = new Member_Benefits(memberId);
             member_Benefits.Show();
+        }
+
+        private void ViewandBookContent_Click(object sender, EventArgs e)
+        {
+            UserBooking content = new UserBooking();
+            content.Show();
+        }
+
+        private void DigitalConnectionsBoard_Click(object sender, EventArgs e)
+        {
+            ConnectionBoard connectionBoard = new ConnectionBoard();
+            connectionBoard.Show();
+
+        }
+
+        private void Information_Click(object sender, EventArgs e)
+        {
+            ContriInfo contriInfo = new ContriInfo();
+            contriInfo.Show();
+        }
+
+        private void Event_Click(object sender, EventArgs e)
+        {
+            EventBo eventBo = new EventBo();
+            eventBo.Show();
+        }
+
+        private void Activity_Click(object sender, EventArgs e)
+        {
+            UserActivity activity = new UserActivity();
+            activity.Show();
+        }
+
+        private void Communicate_Click(object sender, EventArgs e)
+        {
+            Communicate communicate = new Communicate();
+            communicate.Show();
+        }
+
+        private void Documents_Click(object sender, EventArgs e)
+        {
+            Documents documents = new Documents();
+            documents.Show();
+        }
+
+        private void Dashboard_user_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

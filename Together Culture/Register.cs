@@ -39,7 +39,7 @@ namespace Together_Culture
 
         private void Register_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void LoginPage_Click(object sender, EventArgs e)
