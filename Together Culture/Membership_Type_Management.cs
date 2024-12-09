@@ -24,7 +24,7 @@ namespace Together_Culture
             connStr = globals.Conn_string;
         }
 
-        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -124,7 +124,7 @@ namespace Together_Culture
                 int memberCount = (int)countCommand.ExecuteScalar();
 
                 // Display member count in label5
-                label5.Text = $"Members in {selectedMembership}: {memberCount}";
+                label5.Text = $"{selectedMembership}: {memberCount}";
 
                 Membership.Close();
             }
@@ -134,6 +134,11 @@ namespace Together_Culture
                 LoadAllMembers();
                 label5.Text = "Member Count: N/A";
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

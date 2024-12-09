@@ -43,7 +43,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(342, 39);
+            label1.Location = new Point(359, 39);
             label1.Name = "label1";
             label1.Size = new Size(289, 28);
             label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(95, 108);
+            label2.Location = new Point(254, 108);
             label2.Name = "label2";
             label2.Size = new Size(182, 28);
             label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 11F);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(267, 108);
+            comboBox1.Location = new Point(426, 108);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(180, 33);
@@ -74,7 +74,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 11F);
-            button2.Location = new Point(288, 164);
+            button2.Location = new Point(447, 164);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(106, 37);
@@ -85,7 +85,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(367, 231);
+            label3.Location = new Point(390, 285);
             label3.Name = "label3";
             label3.Size = new Size(226, 20);
             label3.TabIndex = 6;
@@ -96,7 +96,7 @@
             label5.AutoSize = true;
             label5.BackColor = SystemColors.ActiveCaption;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(760, 111);
+            label5.Location = new Point(667, 108);
             label5.Name = "label5";
             label5.Size = new Size(0, 28);
             label5.TabIndex = 8;
@@ -107,14 +107,16 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView1.Location = new Point(95, 321);
+            dataGridView1.Location = new Point(151, 321);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(704, 343);
             dataGridView1.TabIndex = 9;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Membership_Type_Management
             // 

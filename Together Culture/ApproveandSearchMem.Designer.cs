@@ -40,7 +40,7 @@
             // 
             // txtSearchMember
             // 
-            txtSearchMember.Location = new Point(306, 202);
+            txtSearchMember.Location = new Point(621, 202);
             txtSearchMember.Name = "txtSearchMember";
             txtSearchMember.Size = new Size(181, 27);
             txtSearchMember.TabIndex = 0;
@@ -48,7 +48,7 @@
             // SearchMem
             // 
             SearchMem.AutoSize = true;
-            SearchMem.Location = new Point(187, 209);
+            SearchMem.Location = new Point(502, 209);
             SearchMem.Name = "SearchMem";
             SearchMem.Size = new Size(113, 20);
             SearchMem.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnSearchMember
             // 
-            btnSearchMember.Location = new Point(197, 507);
+            btnSearchMember.Location = new Point(502, 507);
             btnSearchMember.Name = "btnSearchMember";
             btnSearchMember.Size = new Size(138, 29);
             btnSearchMember.TabIndex = 2;
@@ -66,13 +66,15 @@
             // 
             // dataGridViewMembers
             // 
+            dataGridViewMembers.BackgroundColor = Color.White;
             dataGridViewMembers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewMembers.Columns.AddRange(new DataGridViewColumn[] { Approve });
-            dataGridViewMembers.Location = new Point(187, 246);
+            dataGridViewMembers.Location = new Point(90, 246);
             dataGridViewMembers.Name = "dataGridViewMembers";
             dataGridViewMembers.RowHeadersWidth = 51;
-            dataGridViewMembers.Size = new Size(682, 235);
+            dataGridViewMembers.Size = new Size(1124, 236);
             dataGridViewMembers.TabIndex = 3;
+            dataGridViewMembers.CellContentClick += dataGridViewMembers_CellContentClick;
             // 
             // Approve
             // 
@@ -83,7 +85,7 @@
             // 
             // btnSaveChanges
             // 
-            btnSaveChanges.Location = new Point(341, 507);
+            btnSaveChanges.Location = new Point(646, 507);
             btnSaveChanges.Name = "btnSaveChanges";
             btnSaveChanges.Size = new Size(156, 29);
             btnSaveChanges.TabIndex = 4;
@@ -96,7 +98,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Red;
-            ClientSize = new Size(1056, 739);
+            ClientSize = new Size(1305, 747);
             Controls.Add(btnSaveChanges);
             Controls.Add(dataGridViewMembers);
             Controls.Add(btnSearchMember);

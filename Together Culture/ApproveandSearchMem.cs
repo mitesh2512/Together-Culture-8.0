@@ -140,5 +140,10 @@ namespace Together_Culture
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dataGridViewMembers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

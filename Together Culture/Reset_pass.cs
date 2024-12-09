@@ -44,7 +44,7 @@ namespace Together_Culture
             }
 
             // Validate URL and option selection
-            if (string.IsNullOrWhiteSpace("OK"))
+            if (string.IsNullOrWhiteSpace(null))
             {
                 MessageBox.Show("Please enter a valid MemberID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

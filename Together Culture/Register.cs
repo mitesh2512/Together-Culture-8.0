@@ -81,7 +81,7 @@ namespace Together_Culture
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True";
+            string connectionString = connStr;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
