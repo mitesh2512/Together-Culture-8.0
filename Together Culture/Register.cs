@@ -14,11 +14,15 @@ namespace Together_Culture
 {
     public partial class Register : Form
     {
+        public string connStr = "";
         public Register()
         {
             InitializeComponent();
             PopulateMembershipTypeComboBox();
             PopulateInterestComboBox();
+            Globals globals = new Globals();
+            globals.global_var();
+            connStr = globals.Conn_string;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
