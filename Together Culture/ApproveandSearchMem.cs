@@ -7,9 +7,13 @@ namespace Together_Culture
 {
     public partial class ApproveandSearchMem : Form
     {
+        public string connStr = "";
         public ApproveandSearchMem()
         {
             InitializeComponent();
+            Globals globals = new Globals();
+            globals.global_var();
+            connStr = globals.Conn_string;
         }
 
         // Form Load Event
@@ -42,7 +46,7 @@ namespace Together_Culture
 
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@SearchQuery", searchQuery);
@@ -104,7 +108,7 @@ namespace Together_Culture
 
                     try
                     {
-                        using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+                        using (SqlConnection conn = new SqlConnection(connStr))
                         {
                             SqlCommand cmd = new SqlCommand(query, conn);
                             cmd.Parameters.AddWithValue("@Member_ID", memberId);

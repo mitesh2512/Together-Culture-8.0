@@ -16,10 +16,13 @@ namespace Together_Culture
     public partial class Tags : Form
     {
 
-
+        public string connStr = "";
         public Tags()
         {
             InitializeComponent();
+            Globals globals = new Globals();
+            globals.global_var();
+            connStr = globals.Conn_string;
         }
 
         private void onIndex_change(object sender, EventArgs e)
@@ -35,7 +38,7 @@ namespace Together_Culture
         private void LoadMembersByTag(string tagName)
         {
             // Load members associated with the selected tag
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection conn = new SqlConnection(connStr);
 
             conn.Open();
 
@@ -75,7 +78,7 @@ namespace Together_Culture
             string selectedMember = comboBox1.SelectedValue.ToString();
             string selectedTag = comboBox2.SelectedValue.ToString();
 
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
 
@@ -113,7 +116,7 @@ namespace Together_Culture
 
         private void Load_Members()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
 
@@ -133,7 +136,7 @@ namespace Together_Culture
         private void LoadTags()
         {
             // Load all tags into the ComboBox
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
 
@@ -167,7 +170,7 @@ namespace Together_Culture
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
 
@@ -187,7 +190,7 @@ namespace Together_Culture
         private void LoadAssignedTags()
         {
             // Load all members with their assigned tags into the DataGridView
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
 

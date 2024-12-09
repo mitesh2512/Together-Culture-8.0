@@ -14,10 +14,17 @@ namespace Together_Culture
 {
     public partial class Membership_Type_Management : Form
     {
+
+        public string connStr = "";
         public Membership_Type_Management()
         {
             InitializeComponent();
+            Globals globals = new Globals();
+            globals.global_var();
+            connStr = globals.Conn_string;
         }
+
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -27,7 +34,7 @@ namespace Together_Culture
         private void Membership_Type_Management_Load(object sender, EventArgs e)
         {
             // Establish SQL connection
-            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection Membership = new SqlConnection(connStr);
             Membership.Open();
 
             // Query to load all members
@@ -60,7 +67,7 @@ namespace Together_Culture
         private void LoadAllMembers()
         {
             // Load all members into the DataGridView
-            SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+            SqlConnection Membership = new SqlConnection(connStr);
             Membership.Open();
 
             String sqlquery = "SELECT Member_ID, FullName, MembershipType FROM Members";
@@ -100,7 +107,7 @@ namespace Together_Culture
                 MembershipType = @MembershipType";
 
                 // Establish connection and execute queries
-                SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
+                SqlConnection Membership = new SqlConnection(connStr);
                 Membership.Open();
 
                 // Filter data for DataGridView

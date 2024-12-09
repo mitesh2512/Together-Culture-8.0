@@ -26,8 +26,11 @@ namespace Together_Culture
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Mrugesh\\source\\repos\\New folder\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True";
+          Globals globals = new Globals();
+            globals.global_var();
+            string connectionString = globals.Conn_string; 
 
+             
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 try

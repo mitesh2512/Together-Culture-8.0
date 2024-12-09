@@ -13,9 +13,13 @@ namespace Together_Culture
 {
     public partial class EventSearch : Form
     {
+        public string connStr = "";
         public EventSearch()
         {
             InitializeComponent();
+            Globals globals = new Globals();
+            globals.global_var();
+            connStr = globals.Conn_string;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -49,7 +53,7 @@ namespace Together_Culture
 
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@Start_Date", startDate);
@@ -102,7 +106,7 @@ namespace Together_Culture
 
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
 
