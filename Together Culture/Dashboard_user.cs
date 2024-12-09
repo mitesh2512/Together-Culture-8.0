@@ -68,8 +68,8 @@ namespace Together_Culture
 
         private void Event_Click(object sender, EventArgs e)
         {
-            EventBo eventBo = new EventBo();
-            eventBo.Show();
+           EventBooking eventBooking = new EventBooking();
+            eventBooking.Show();
         }
 
         private void Activity_Click(object sender, EventArgs e)
