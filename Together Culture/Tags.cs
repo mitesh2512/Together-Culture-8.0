@@ -40,7 +40,7 @@ namespace Together_Culture
             conn.Open();
 
             string query = @"
-                SELECT m.Member_ID, m.Member_Name 
+                SELECT m.Member_ID, m.FullName 
                 FROM Members m
                 INNER JOIN Member_Tags mt ON m.Member_ID = mt.Member_ID
                 INNER JOIN Tags t ON mt.Tag_ID = t.Tag_ID
@@ -117,13 +117,13 @@ namespace Together_Culture
             {
                 conn.Open();
 
-                string query = "SELECT Member_ID, Member_Name FROM Members";
+                string query = "SELECT Member_ID, FullName FROM Members";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
                 comboBox1.DataSource = dt;
-                comboBox1.DisplayMember = "Member_Name";
+                comboBox1.DisplayMember = "FullName";
                 comboBox1.ValueMember = "Member_ID";
 
                 comboBox1.SelectedIndex = -1; // No selection by default
@@ -193,7 +193,7 @@ namespace Together_Culture
 
                 string query = @"
                     SELECT 
-                        m.Member_Name, 
+                        m.FullName, 
                         t.Tag_Name 
                     FROM 
                         Member_Tags mt

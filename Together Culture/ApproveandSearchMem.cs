@@ -27,13 +27,17 @@ namespace Together_Culture
             string query = @"
                 SELECT 
                     Member_ID, 
-                    Member_Name, 
-                    Member_Email, 
+                    FullName, 
+                    DateOfBirth,
+                    MembershipType,
+                    EmailAddress,
+                    MobileNumber,   
+                    Interest,
                     CASE WHEN IsApproved = 1 THEN 'Approved' ELSE 'Pending' END AS Status
                 FROM Members
                 WHERE 
-                    Member_Name LIKE '%' + @SearchQuery + '%' 
-                    OR Member_Email LIKE '%' + @SearchQuery + '%';
+                    FullName LIKE '%' + @SearchQuery + '%' 
+                    OR EmailAddress LIKE '%' + @SearchQuery + '%';
             ";
 
             try

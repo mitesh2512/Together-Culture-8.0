@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
+            FullName = new TextBox();
+            MobileNumber = new TextBox();
+            Password = new TextBox();
+            EmailAddress = new TextBox();
             textBox6 = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -40,47 +40,51 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            DateOfBirth = new DateTimePicker();
             registerButton = new Button();
             LoginPage = new Button();
             RegisterLable = new Label();
             pictureBox1 = new PictureBox();
+            MembershipTypeBox = new ComboBox();
+            MembershipType = new Label();
+            InterestL = new Label();
+            InterestBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // FullName
             // 
-            textBox1.Location = new Point(208, 218);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(206, 27);
-            textBox1.TabIndex = 0;
+            FullName.Location = new Point(208, 218);
+            FullName.Name = "FullName";
+            FullName.Size = new Size(206, 27);
+            FullName.TabIndex = 0;
             // 
-            // textBox2
+            // MobileNumber
             // 
-            textBox2.Location = new Point(208, 282);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(206, 27);
-            textBox2.TabIndex = 1;
+            MobileNumber.Location = new Point(208, 282);
+            MobileNumber.Name = "MobileNumber";
+            MobileNumber.Size = new Size(206, 27);
+            MobileNumber.TabIndex = 1;
             // 
-            // textBox3
+            // Password
             // 
-            textBox3.Location = new Point(208, 343);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(206, 27);
-            textBox3.TabIndex = 2;
+            Password.Location = new Point(208, 343);
+            Password.Name = "Password";
+            Password.Size = new Size(206, 27);
+            Password.TabIndex = 2;
             // 
-            // textBox5
+            // EmailAddress
             // 
-            textBox5.Location = new Point(488, 282);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(206, 27);
-            textBox5.TabIndex = 4;
+            EmailAddress.Location = new Point(488, 282);
+            EmailAddress.Name = "EmailAddress";
+            EmailAddress.Size = new Size(250, 27);
+            EmailAddress.TabIndex = 4;
             // 
             // textBox6
             // 
             textBox6.Location = new Point(488, 343);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(206, 27);
+            textBox6.Size = new Size(250, 27);
             textBox6.TabIndex = 5;
             // 
             // label1
@@ -150,17 +154,17 @@
             label6.TabIndex = 11;
             label6.Text = "Confirm Password";
             // 
-            // dateTimePicker1
+            // DateOfBirth
             // 
-            dateTimePicker1.Location = new Point(488, 215);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 12;
+            DateOfBirth.Location = new Point(488, 215);
+            DateOfBirth.Name = "DateOfBirth";
+            DateOfBirth.Size = new Size(250, 27);
+            DateOfBirth.TabIndex = 12;
             // 
             // registerButton
             // 
             registerButton.ForeColor = Color.Navy;
-            registerButton.Location = new Point(321, 417);
+            registerButton.Location = new Point(320, 482);
             registerButton.Name = "registerButton";
             registerButton.Size = new Size(94, 29);
             registerButton.TabIndex = 13;
@@ -172,7 +176,7 @@
             // 
             LoginPage.BackColor = Color.Transparent;
             LoginPage.ForeColor = Color.Black;
-            LoginPage.Location = new Point(488, 415);
+            LoginPage.Location = new Point(488, 477);
             LoginPage.Margin = new Padding(3, 4, 3, 4);
             LoginPage.Name = "LoginPage";
             LoginPage.Size = new Size(86, 31);
@@ -201,6 +205,42 @@
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
+            // MembershipTypeBox
+            // 
+            MembershipTypeBox.FormattingEnabled = true;
+            MembershipTypeBox.Location = new Point(208, 405);
+            MembershipTypeBox.Name = "MembershipTypeBox";
+            MembershipTypeBox.Size = new Size(206, 28);
+            MembershipTypeBox.TabIndex = 17;
+            // 
+            // MembershipType
+            // 
+            MembershipType.AutoSize = true;
+            MembershipType.ForeColor = Color.Black;
+            MembershipType.Location = new Point(208, 382);
+            MembershipType.Name = "MembershipType";
+            MembershipType.Size = new Size(127, 20);
+            MembershipType.TabIndex = 18;
+            MembershipType.Text = "Membership Type";
+            // 
+            // InterestL
+            // 
+            InterestL.AutoSize = true;
+            InterestL.ForeColor = Color.Black;
+            InterestL.Location = new Point(490, 382);
+            InterestL.Name = "InterestL";
+            InterestL.Size = new Size(58, 20);
+            InterestL.TabIndex = 19;
+            InterestL.Text = "Interest";
+            // 
+            // InterestBox
+            // 
+            InterestBox.FormattingEnabled = true;
+            InterestBox.Location = new Point(490, 405);
+            InterestBox.Name = "InterestBox";
+            InterestBox.Size = new Size(248, 28);
+            InterestBox.TabIndex = 20;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -208,11 +248,15 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.Red;
             ClientSize = new Size(946, 614);
+            Controls.Add(InterestBox);
+            Controls.Add(InterestL);
+            Controls.Add(MembershipType);
+            Controls.Add(MembershipTypeBox);
             Controls.Add(pictureBox1);
             Controls.Add(RegisterLable);
             Controls.Add(LoginPage);
             Controls.Add(registerButton);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(DateOfBirth);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -220,10 +264,10 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(EmailAddress);
+            Controls.Add(Password);
+            Controls.Add(MobileNumber);
+            Controls.Add(FullName);
             ForeColor = Color.Red;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Register";
@@ -238,10 +282,10 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox5;
+        private TextBox FullName;
+        private TextBox MobileNumber;
+        private TextBox Password;
+        private TextBox EmailAddress;
         private TextBox textBox6;
         private Label label1;
         private Label label2;
@@ -249,10 +293,14 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DateOfBirth;
         private Button registerButton;
         private Button LoginPage;
         private Label RegisterLable;
         private PictureBox pictureBox1;
+        private ComboBox MembershipTypeBox;
+        private Label MembershipType;
+        private Label InterestL;
+        private ComboBox InterestBox;
     }
 }
