@@ -31,7 +31,7 @@ namespace Together_Culture
             Membership.Open();
 
             // Query to load all members
-            String sqlquery = "SELECT Member_ID, Member_Name, MembershipType FROM Members";
+            String sqlquery = "SELECT Member_ID, FullName, MembershipType FROM Members";
 
             // Load all members into DataGridView
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery, Membership);
@@ -63,7 +63,7 @@ namespace Together_Culture
             SqlConnection Membership = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True");
             Membership.Open();
 
-            String sqlquery = "SELECT Member_ID, Member_Name, MembershipType FROM Members";
+            String sqlquery = "SELECT Member_ID, FullName, MembershipType FROM Members";
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery, Membership);
             DataTable dt = new DataTable();
             sqldata.Fill(dt);
@@ -83,7 +83,7 @@ namespace Together_Culture
                 string filterQuery = @"
             SELECT 
                 Member_ID, 
-                Member_Name, 
+                FullName, 
                 MembershipType 
             FROM 
                 Members 
