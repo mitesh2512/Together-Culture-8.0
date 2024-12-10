@@ -29,8 +29,17 @@ namespace Together_Culture
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Validate URL and option selection
+           
+
             // Get the text from the TextBox
             string url = Memberid.Text; // Ensure your TextBox name is correct (e.g., `textBox1`)
+
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                MessageBox.Show("Please enter a valid MemberID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             // Check which RadioButton is selected
             string selectedOption = null;
@@ -43,13 +52,6 @@ namespace Together_Culture
                 selectedOption = "Message";
             }
 
-            // Validate URL and option selection
-            if (string.IsNullOrWhiteSpace("OK"))
-            {
-                MessageBox.Show("Please enter a valid MemberID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (selectedOption == null)
             {
                 MessageBox.Show("Please select an option.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -60,7 +62,7 @@ namespace Together_Culture
             LinkSent.Text = $"Link has been sent to {selectedOption}.";
             LinkSent.Visible = true;
 
-          
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -79,6 +81,11 @@ namespace Together_Culture
                 // Optional: Perform any specific action when RadioButton2 is selected
                 Console.WriteLine("Message selected.");
             }
+        }
+
+        private void Memberid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

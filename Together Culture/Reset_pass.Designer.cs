@@ -75,10 +75,13 @@
             // 
             // Memberid
             // 
+            Memberid.AccessibleName = "Memberid";
             Memberid.Location = new Point(139, 329);
             Memberid.Name = "Memberid";
+            Memberid.PlaceholderText = "Enter Your Member ID";
             Memberid.Size = new Size(210, 27);
             Memberid.TabIndex = 3;
+            Memberid.TextChanged += Memberid_TextChanged;
             // 
             // Ress_Pass
             // 

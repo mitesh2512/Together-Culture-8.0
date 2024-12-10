@@ -118,7 +118,7 @@ namespace Together_Culture
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.DimGray;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = SystemColors.InactiveBorder;
             dataGridView1.Location = new Point(411, 74);

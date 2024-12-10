@@ -68,7 +68,7 @@ namespace Together_Culture
 
         private void Event_Click(object sender, EventArgs e)
         {
-           EventBooking eventBooking = new EventBooking();
+            EventBooking eventBooking = new EventBooking();
             eventBooking.Show();
         }
 
@@ -93,6 +93,11 @@ namespace Together_Culture
         private void Dashboard_user_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Dashboard_user_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

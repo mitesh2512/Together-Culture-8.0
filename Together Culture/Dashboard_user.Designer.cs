@@ -292,6 +292,7 @@
             Text = "Dashboard";
             WindowState = FormWindowState.Maximized;
             FormClosing += Dashboard_user_FormClosing;
+            Load += Dashboard_user_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

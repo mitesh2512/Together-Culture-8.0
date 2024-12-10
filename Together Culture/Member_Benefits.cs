@@ -7,12 +7,17 @@ namespace Together_Culture
 {
     public partial class Member_Benefits : Form
     {
+        public string connStr = "" ;
         public int MemberID { get; set; } // Member ID passed from the login process
 
         public Member_Benefits(int memberId)
         {
             InitializeComponent();
             MemberID = memberId;  // Store the MemberID
+            Globals globals = new Globals();
+            globals.global_var();
+            connStr = globals.Conn_string;
+
         }
 
         private void Member_Benefits_Load(object sender, EventArgs e)
@@ -30,7 +35,7 @@ namespace Together_Culture
         // Load Unused Benefits for the Member
         private void LoadMemberBenefits()
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True";
+            string connectionString = connStr;
             string query = @"
                 SELECT b.Benefit_ID, b.Benefit_Name, b.Benefit_Description, mb.Status
                 FROM Benefits b
@@ -39,7 +44,7 @@ namespace Together_Culture
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MemberID", MemberID);
@@ -69,7 +74,7 @@ namespace Together_Culture
         // Update the benefit status to 'Used'
         private void MarkBenefitAsUsed(int benefitID)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\adit\\mitesh2512\\Together-Culture-8.0\\Together Culture\\DataBase.mdf\";Integrated Security=True";
+            string connectionString = connStr;
 
             string query = @"
         UPDATE MemberBenefits
@@ -78,7 +83,7 @@ namespace Together_Culture
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MemberID", MemberID);
