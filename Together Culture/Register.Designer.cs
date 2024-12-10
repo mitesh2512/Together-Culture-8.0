@@ -72,6 +72,7 @@
             Password.Name = "Password";
             Password.Size = new Size(206, 27);
             Password.TabIndex = 2;
+            Password.UseSystemPasswordChar = true;
             // 
             // EmailAddress
             // 
@@ -86,6 +87,7 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(250, 27);
             textBox6.TabIndex = 5;
+            textBox6.UseSystemPasswordChar = true;
             // 
             // label1
             // 
