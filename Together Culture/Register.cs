@@ -89,6 +89,49 @@ namespace Together_Culture
                 {
                     conn.Open();
 
+                    // Check for empty inputs and provide default values or show an error message
+                    if (string.IsNullOrEmpty(FullName.Text))
+                    {
+                        MessageBox.Show("Full Name is required.");
+                        return;
+                    }
+
+                    if (DateOfBirth.Value == null || DateOfBirth.Value > DateTime.Now)
+                    {
+                        MessageBox.Show("Please select a valid Date of Birth.");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(MobileNumber.Text))
+                    {
+                        MessageBox.Show("Mobile Number is required.");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(EmailAddress.Text))
+                    {
+                        MessageBox.Show("Email Address is required.");
+                        return;
+                    }
+
+                    if (string.IsNullOrEmpty(Password.Text))
+                    {
+                        MessageBox.Show("Password is required.");
+                        return;
+                    }
+
+                    if (MembershipTypeBox.SelectedItem == null)
+                    {
+                        MessageBox.Show("Please select a Membership Type.");
+                        return;
+                    }
+
+                    if (InterestBox.SelectedItem == null)
+                    {
+                        MessageBox.Show("Please select an Interest.");
+                        return;
+                    }
+
                     string query = "INSERT INTO Members (FullName, DateOfBirth, MobileNumber, EmailAddress, Password, MembershipType, Interest) VALUES (@FullName, @DateOfBirth, @MobileNumber, @EmailAddress, @Password, @MembershipType, @Interest)";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {

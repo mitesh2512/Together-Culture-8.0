@@ -7,7 +7,7 @@ namespace Together_Culture
 {
     public partial class Member_Benefits : Form
     {
-        public string connStr = "" ;
+        public string connStr = "";
         public int MemberID { get; set; } // Member ID passed from the login process
 
         public Member_Benefits(int memberId)
@@ -17,7 +17,6 @@ namespace Together_Culture
             Globals globals = new Globals();
             globals.global_var();
             connStr = globals.Conn_string;
-
         }
 
         private void Member_Benefits_Load(object sender, EventArgs e)
@@ -32,15 +31,14 @@ namespace Together_Culture
             }
         }
 
-        // Load Unused Benefits for the Member
+        // Load both used and unused benefits for the member
         private void LoadMemberBenefits()
         {
-            string connectionString = connStr;
             string query = @"
                 SELECT b.Benefit_ID, b.Benefit_Name, b.Benefit_Description, mb.Status
                 FROM Benefits b
                 JOIN MemberBenefits mb ON b.Benefit_ID = mb.Benefit_ID
-                WHERE mb.Member_ID = @MemberID AND mb.Status = 'Unused'";
+                WHERE mb.Member_ID = @MemberID";
 
             try
             {
@@ -55,7 +53,6 @@ namespace Together_Culture
                     // Bind the result to the DataGridView
                     dataGridView1.DataSource = dt;
                     dataGridView1.Columns["Benefit_ID"].Visible = false; // Hide Benefit_ID column
-                    dataGridView1.Columns["Status"].Visible = false; // Hide Status column
                 }
             }
             catch (Exception ex)
@@ -64,22 +61,26 @@ namespace Together_Culture
             }
         }
 
-        // Button to Use Selected Benefits
-
+        // Button to use selected benefits
         private void btnUseBenefit_Click(object sender, EventArgs e)
         {
-            
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                int benefitID = Convert.ToInt32(row.Cells["Benefit_ID"].Value);
+                MarkBenefitAsUsed(benefitID);
+            }
+
+            // Reload the benefits after updating
+            LoadMemberBenefits();
         }
 
         // Update the benefit status to 'Used'
         private void MarkBenefitAsUsed(int benefitID)
         {
-            string connectionString = connStr;
-
             string query = @"
-        UPDATE MemberBenefits
-        SET Status = 'Used', DateUsed = GETDATE()
-        WHERE Member_ID = @MemberID AND Benefit_ID = @BenefitID AND Status = 'Unused'";  // Ensure it's 'Unused'
+                UPDATE MemberBenefits
+                SET Status = 'Used', DateUsed = GETDATE()
+                WHERE Member_ID = @MemberID AND Benefit_ID = @BenefitID AND Status = 'Unused'";
 
             try
             {
@@ -100,16 +101,16 @@ namespace Together_Culture
             }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridView1.Columns[e.ColumnIndex].Name == "Benefit_Name")
             {
-                int benefitID = Convert.ToInt32(row.Cells["Benefit_ID"].Value);
+                int benefitID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Benefit_ID"].Value);
                 MarkBenefitAsUsed(benefitID);
-            }
 
-            // Reload the benefits after updating
-            LoadMemberBenefits();
+                // Reload the benefits after updating
+                LoadMemberBenefits();
+            }
         }
     }
 }

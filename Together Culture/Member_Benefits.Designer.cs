@@ -34,7 +34,6 @@
             dataGridView1 = new DataGridView();
             usedbene = new Label();
             label1 = new Label();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -42,7 +41,7 @@
             // unusedbene
             // 
             unusedbene.AutoSize = true;
-            unusedbene.Location = new Point(747, 199);
+            unusedbene.Location = new Point(857, 199);
             unusedbene.Name = "unusedbene";
             unusedbene.Size = new Size(115, 20);
             unusedbene.TabIndex = 31;
@@ -57,7 +56,6 @@
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.Size = new Size(501, 188);
             dataGridView2.TabIndex = 30;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // Used
             // 
@@ -79,7 +77,7 @@
             // 
             usedbene.AutoSize = true;
             usedbene.ForeColor = SystemColors.Control;
-            usedbene.Location = new Point(314, 199);
+            usedbene.Location = new Point(222, 199);
             usedbene.Name = "usedbene";
             usedbene.Size = new Size(99, 20);
             usedbene.TabIndex = 27;
@@ -89,20 +87,11 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(314, 82);
+            label1.Location = new Point(538, 115);
             label1.Name = "label1";
             label1.Size = new Size(122, 20);
             label1.TabIndex = 26;
             label1.Text = "Member Benefits";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(544, 537);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 32;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Member_Benefits
             // 
@@ -110,7 +99,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Red;
             ClientSize = new Size(1176, 658);
-            Controls.Add(button1);
             Controls.Add(unusedbene);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
@@ -133,6 +121,5 @@
         private Label usedbene;
         private Label label1;
         private DataGridViewButtonColumn Used;
-        private Button button1;
     }
 }

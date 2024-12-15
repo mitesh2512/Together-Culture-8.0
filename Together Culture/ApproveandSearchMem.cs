@@ -8,6 +8,7 @@ namespace Together_Culture
     public partial class ApproveandSearchMem : Form
     {
         public string connStr = "";
+
         public ApproveandSearchMem()
         {
             InitializeComponent();
@@ -56,12 +57,21 @@ namespace Together_Culture
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    // Bind data to DataGridView
-                    dataGridViewMembers.DataSource = dt;
-                    dataGridViewMembers.Columns["Member_ID"].Visible = false; // Hide Member_ID
+                    // Check if there are any results
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No members found with the provided search criteria.", "No Results",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Bind data to DataGridView
+                        dataGridViewMembers.DataSource = dt;
+                        dataGridViewMembers.Columns["Member_ID"].Visible = false; // Hide Member_ID
 
-                    // Add checkbox column for approvals
-                    AddApproveColumn();
+                        // Add checkbox column for approvals
+                        AddApproveColumn();
+                    }
                 }
             }
             catch (Exception ex)
@@ -143,7 +153,8 @@ namespace Together_Culture
 
         private void dataGridViewMembers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Handle cell content click if needed
         }
     }
 }
+
