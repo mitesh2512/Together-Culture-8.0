@@ -41,5 +41,10 @@ namespace Together_Culture
             eventDetails.Show();
             this.Hide();
         }
+
+        private void EventBooking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

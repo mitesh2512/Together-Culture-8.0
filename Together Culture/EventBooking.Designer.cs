@@ -127,6 +127,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             ClientSize = new Size(800, 450);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -139,6 +140,7 @@
             Controls.Add(label1);
             Name = "EventBooking";
             Text = "EventBooking";
+            Load += EventBooking_Load;
             ResumeLayout(false);
             PerformLayout();
         }
